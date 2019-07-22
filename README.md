@@ -4,8 +4,8 @@
 ## [ :arrow_forward: DEMO ON HEROKU]()
 
 ## Function :question:
-# [checkbox:checked]  Scrape stories from a news outlet 
-* Display them for the user
+#  [checkbox:checked]  Scrape stories from a news outlet 
+* checked # [checkbox:checked] Display them for the user 
 * Each scraped article should be saved to your application database. 
 * Users should also be able to leave comments on the articles displayed and revisit them later. 
 * The comments should be saved to the database as well and associated with their articles. 
