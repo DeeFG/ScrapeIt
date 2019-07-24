@@ -1,11 +1,11 @@
-var mongoose = require("mongoose");
+const mongoose = require("mongoose");
 
 // Save a reference to the Schema constructor
-var Schema = mongoose.Schema;
+const Schema = mongoose.Schema;
 
 // Using the Schema constructor, create a new UserSchema object
 // This is similar to a Sequelize model
-var ArticleModel = new Schema({
+const ArticleModel = new Schema({
   // `title` is required and of type String
   header: {
     type: String,
@@ -30,12 +30,18 @@ var ArticleModel = new Schema({
     type: Boolean,
     default: false
   },
+  deleted: {
+    type: Boolean,
+    required: true,
+    default: false
+  },
   // `comment` is an object that stores a comment id
   // The ref property links the ObjectId to the comment model
   // This allows us to populate the Article with an associated comment
   comment: {
     type: Schema.Types.ObjectId,
-    ref: "comment"
+    ref: "comment",
+    required: false
   }
 });
 
