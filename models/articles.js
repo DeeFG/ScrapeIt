@@ -22,8 +22,9 @@ const ArticleModel = new Schema({
     required: true
   },
   
-  imageURL: {
-    type: String
+  image: {
+    type: String,
+    required: true
     // required: true
   },
   savedArticle: {
@@ -32,7 +33,7 @@ const ArticleModel = new Schema({
   },
   deleted: {
     type: Boolean,
-    required: true,
+    //required: true,
     default: false
   },
   // `comment` is an object that stores a comment id

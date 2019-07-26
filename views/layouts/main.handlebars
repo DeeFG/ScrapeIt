@@ -16,11 +16,31 @@
         <!-- bootstrap cdn -->
     	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
         <!-- Custom styles for this template -->
-        <link rel="stylesheet" href="./public/css/style.css" type='text/css'>
+        <link rel="stylesheet" href="public/css/style.css" type='text/css'>
         
     </head>
 
-    <body>
+  <body></body>
+
+  <div> 
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar">
+    <div class="container-fluid">
+        <div class="navbar-header">
+           <img src="">
+           <a class="navbar-brand" href="/">Get Articles!</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="/saved">Saved Articles</a></li>
+            
+        </ul>
+        <a class="btn btn-primary navbar-btn" id="scrapeBtn" href="/api/scrapeNewArticles">Scrape Articles!</a>
+    </div>
+</nav>
+</div>
+
+
+  <br><br><br>
         
         <div class="container" id="wrapper">
             {{{ body }}}
