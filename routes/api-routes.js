@@ -67,7 +67,8 @@ router.get("/scrapeNewArticles", function(req, res) {
         .find("a")
         .attr("href");
       var imageURL = $(element)
-        .find("a")
+        // .find("a")
+        .find(".image-block")
         .find("img")
         .attr("src");
 
@@ -120,6 +121,14 @@ router.get("/saveArticle/:articleId", function(req, res) {
       res.json(err);
     });
 });
+
+
+
+
+
+
+
+
 
 //delete article from saved
 router.get("/deleteFromSaved/:articleId", function(req, res) {

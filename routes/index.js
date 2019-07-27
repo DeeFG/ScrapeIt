@@ -48,7 +48,6 @@ router.get("/saved", function(req, res) {
     .where("deleted")
     .equals(false)
     .populate("comments")
-    .sort("-date")
     .exec(function(error, articles) {
       var flag = false;
       if (articles.length == 0) {
@@ -57,7 +56,7 @@ router.get("/saved", function(req, res) {
         flag = false;
       }
       console.log("obj empty flag in saved articles api-route:", flag);
-      res.render("savedArticles", { articleObj: articles, objEmpty: flag });
+      res.render("saved", { articleObj: articles, objEmpty: flag });
     })
     .catch(function(err) {
       res.json(err);
